@@ -6,6 +6,10 @@
 #define KEY_POWER 0x66
 #define KEY_EJECT 0xb8
 
+#define MIN_VOLTAGE 760
+#define MAX_VOLTAGE 770
+
+
 void setup() {
     pinMode(2, INPUT);
 }
@@ -13,7 +17,7 @@ void setup() {
 void loop() {
     DigiKeyboard.delay(100);
     int anaValue = analogRead(1);
-    if (anaValue >= 760 && anaValue < 770) {
+    if (anaValue >= MIN_VOLTAGE && anaValue < MAX_VOLTAGE) {
         // Control + Power button || Control + Media Eject: shut down with confirm
         // Control + Option + Command + Power button || Control + Option + Command + 
         // Media Eject: shut down your Mac without confirm
