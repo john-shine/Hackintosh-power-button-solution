@@ -24,7 +24,7 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
   Open Arduino IDE, open test_modifiers.nio file and click upload to compile. After message "please plugin device now" appear, replug in attiny85. Wait flush complete, then pull out attiny85.
 
-  Visit (https://pqrs.org/osx/karabiner/)[https://pqrs.org/osx/karabiner/] and download Karabiner-Elements in hackintosh PC. Install Karabiner-Elements, you will find Karabiner event listener in menubar, launch it.
+  Visit https://pqrs.org/osx/karabiner/ and download Karabiner-Elements in hackintosh PC. Install Karabiner-Elements, you will find Karabiner event listener in menubar, launch it.
 
   plug in attiny85. wait LED flush completed, your will see keyboard events in Karabiner event listener.
 
