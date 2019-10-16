@@ -6,8 +6,8 @@
 #define KEY_POWER 0x66
 #define KEY_EJECT 0xb8
 
-#define MIN_VOLTAGE 760
-#define MAX_VOLTAGE 770
+#define MIN_VOLTAGE 70
+#define MAX_VOLTAGE 90
 
 
 void setup() {
@@ -15,15 +15,15 @@ void setup() {
 }
 
 void loop() {
-    DigiKeyboard.delay(100);
+    DigiKeyboard.delay(200);
     int anaValue = analogRead(1);
     if (anaValue >= MIN_VOLTAGE && anaValue < MAX_VOLTAGE) {
         // Control + Power button || Control + Media Eject: shut down with confirm
         // Control + Option + Command + Power button || Control + Option + Command + 
         // Media Eject: shut down your Mac without confirm
         // sendKeyPress(0) to release current pressed keys
-        DigiKeyboard.sendKeyPress(0);
-        DigiKeyboard.sendKeyPress(KEY_POWER, KEY_CONTROL | KEY_OPTION | KEY_COMMAND);
+        DigiKeyboard.sendKeyStroke(0);
+        DigiKeyboard.sendKeyStroke(KEY_POWER, KEY_CONTROL | KEY_OPTION | KEY_COMMAND);
         DigiKeyboard.delay(3000);
     }
 }
