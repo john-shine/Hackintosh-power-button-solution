@@ -1,0 +1,15 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+    
+}
+
+void loop() {
+    DigiKeyboard.sendKeyStroke(0);
+    int i;
+    for (i = 0; i++; i <= 7) {
+        DigiKeyboard.sendKeyStroke(i, 1<<i);
+        // delay for 3 seconds, give human the time to response.
+        DigiKeyboard.delay(3000);
+    }
+}
