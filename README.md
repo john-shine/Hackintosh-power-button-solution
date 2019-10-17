@@ -5,7 +5,8 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
 ## Preparation
 
-+ digispark attiny85
+![Attiny85](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/Attiny85.jpg)
++ digispark Attiny85
 + Arduino IDE
 + a windows PC
 + a voltmeter
@@ -13,6 +14,7 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
 ## Circuit diagram
 
+![circuit](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/circuit.jpg)
 
 ## Instruction
 
@@ -29,14 +31,20 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
   Download Arduino IDE in this website: https://www.arduino.cc/en/main/software, and install to your windows PC. Then, follow this [tutorial](https://digistump.com/wiki/digispark/tutorials/connecting) to configure IDE. Pay attention, you should install Digispark drivers for device to work.
 
   Open test_modifiers/test_modifiers.ino file with IDE and click upload to compile && flush. After message "Plug in device now..." appear, replug in Attiny85. Wait flush complete, then pull out attiny85.
+  
+  ![test_modifiers](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/test_modifiers.png)
 
   Visit https://pqrs.org/osx/karabiner/ and download Karabiner-Elements in hackintosh PC. Install Karabiner-Elements, you will find Karabiner event listener in menubar, launch it.
+  
+  ![EventViewer](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/EventViewer.JPG)
 
   plug in Attiny85. wait LED flush completed, your will see keyboard events in Karabiner event listener.
 
 ### step 4. measure voltage using test_voltage.ino.
 
   Just similar to step 3, open test_voltage/test_voltage.ino and upload to Attiny85. Before that, remember to open notepad.exe window, Once codes uploaded, focus on notepad.exe window, wait for codes to execute. As a result, every voltage will print on notepad.exe in seconds, remeber to press in power button to test voltage when power switch is shorted.
+  
+   ![test_voltage](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/voltage.png)
 
 ### step 5. complete Hackintosh-power-button-solution.ino and flash to test.
 
