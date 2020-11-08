@@ -36,7 +36,7 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
   Visit https://pqrs.org/osx/karabiner/ and download Karabiner-Elements in hackintosh PC. Install Karabiner-Elements, you will find Karabiner event listener in menubar, launch it.
   
-  ![EventViewer](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/EventViewer.jpg)
+  ![EventViewer](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/EventViewer.JPG)
 
   plug in Attiny85. wait LED flush completed, your will see keyboard events in Karabiner event listener.
 
